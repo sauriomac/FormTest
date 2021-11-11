@@ -3,7 +3,6 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
-    "@testing-library/jest-dom": "^5.15.0",
     "@testing-library/react": "^11.2.7",
     "@testing-library/user-event": "^12.8.3",
     "react": "^17.0.2",
@@ -34,5 +33,15 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
+  },
+  "devDependencies": {
+    "@testing-library/jest-dom": "^5.15.0",
+    "@types/enzyme": "^3.10.10",
+    "@types/react": "^17.0.34",
+    "@wojtekmaj/enzyme-adapter-react-17": "^0.6.5",
+    "enzyme-to-json": "^3.6.2"
+  },
+  "jest": {
+    "snapshotSerializers": ["enzyme-to-json/serializer"]
   }
 }

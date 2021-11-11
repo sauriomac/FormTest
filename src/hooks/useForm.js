@@ -3,17 +3,17 @@ import { useState } from "react";
 export const useForm = (initialForm, validateForm) => {
     const [form, setform] = useState(initialForm)
     const [errors, seterrors] = useState({})
-   
+
 
     const handleChange = (e) => {
-        const {name,value} = e.target
+        const { name, value } = e.target
 
         setform({
             ...form,
-            [name]:value
+            [name]: value
         })
-     };
-    const handleBlur = (e) => { 
+    };
+    const handleBlur = (e) => {
         handleChange(e);
         seterrors(validateForm(form))
     };
